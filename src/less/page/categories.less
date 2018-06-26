@@ -37,6 +37,10 @@
 		line-height: 40px;
 		text-align: center;
 
+		@media @tablet-strict{
+			font-size: 5vw;
+		}
+
 		@media @desktop{
 			float: left;
 			text-align: left;
@@ -99,8 +103,12 @@
 			line-height: 40px;
 			width: 100%;
 			text-align: center;
-			font-size: 4.2vmin;
+			font-size: 4vmin;
 			height: 40px;
+
+			@media @tablet-strict{
+				font-size: 3vw;
+			}
 
 			@media @desktop-strict{
 				line-height: 40px;
@@ -186,6 +194,10 @@
 
 		&__image{
 			max-width: 46vw;
+
+			&-i{
+				max-height: 250px;
+			}
 		}
 	}
 
@@ -197,6 +209,10 @@
 
 		&__image{
 			max-width: 450px;
+
+			&-i{
+				max-height: 300px;
+			}
 		}
 	}
 
@@ -206,10 +222,10 @@
 
 		&__image{
 			max-width: 100%;
-			max-height: 300px;
+			max-height: 200px;
 
 			&-i{
-				height: 200px;
+				max-height: 200px;
 			}
 		}
 	}
@@ -222,5 +238,39 @@
 
 	&::after{
 		content: ')';
+	}
+}
+
+.services{
+	width: 100%;
+	margin-top: 50px;
+
+	&__title{
+		width: 90%;
+		margin: 0 auto;
+
+		&-i{
+			font-size: 30px;
+		}
+	}
+
+	&__text{
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 40px;
+
+		&-i{
+			font-size: 17px;
+		}
+	}
+
+	@media @desktop{
+		&__title{
+			width: 100%;
+		}
+
+		&__text{
+			width: 100%;
+		}
 	}
 }
