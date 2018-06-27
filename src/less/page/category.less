@@ -1,0 +1,213 @@
+@import (less) './_vars';
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.equipment{
+	width: 100%;
+	position: relative;
+
+	&_content{
+		padding: 0 10px;
+
+		@media @tablet-strict{
+			padding: 0 15px;
+		}
+
+		@media @desktop-strict{
+			padding: 0 25px;
+		}
+
+		@media @large{
+			width: 80vw;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+	}
+
+	&__header{
+		width: 100%;
+
+		&_img{
+			width: 90%;
+			margin: 0 auto;
+			height: 180px;
+
+			@media @tablet-strict{
+				height: 250px;
+			}
+
+			@media @desktop{
+				width: 100%;
+			}
+
+			@media @desktop-strict{
+				height: 300px;
+			}
+
+			@media @large{
+				height: 400px;
+			}
+
+			&-i{
+				height: 100%;
+				max-width: 100%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		&_title{
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 30px;
+
+			@media @desktop{
+				margin-bottom: 80px;
+			}
+
+			&-i{
+				font-weight: 700;
+				font-size: 20px;
+				text-align: center;
+				
+				@media @tablet{
+					font-weight: 500;
+				}
+
+				@media @tablet-strict{
+					font-size: 21px;
+				}
+
+				@media @desktop{
+					text-align: left;
+					font-size: 23px;
+				}
+			}
+		}
+	}
+
+	&__links{
+		width: 100%;
+	}
+
+	&__link{
+		width: 90%;
+		margin: 0 auto;
+
+		@media @tablet{
+			display: inline-block;
+		}
+
+		@media @tablet-strict{
+			width: 45%;
+			margin-right: 10px;
+		}
+
+		@media @desktop{
+			width: 31%;
+			margin-right: 15px;
+		}
+
+		&_img{
+			width: 100%;
+
+			&-i{
+				height: 200px;
+				max-width: 100%;
+				display: block;
+				margin: 0 auto;
+
+				@media @desktop{
+					height: 230px;
+				}
+			}
+		}
+
+		&_text{
+			font-size: 14px;
+			text-align: center;
+
+			@media @tablet-strict{
+				font-size: 15px;
+			}
+
+			@media @desktop{
+				text-align: left;
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__text{
+		&_small{
+			font-size: 12px;
+			color: #CCCCCC;
+		}
+
+		&_margin{
+			margin: 30px 0;
+
+			@media @desktop{
+				margin: 50px 0;
+			}
+		}
+	}
+
+	&__information{
+		width: 100%;
+		margin-bottom: 100px;
+
+		&_text{
+			font-size: 15px;
+			margin-bottom: 30px;
+
+			@media @desktop{
+				font-size: 17px;
+			}
+		}
+
+		&_subparagraph{
+			margin-left: 30px;
+
+			@media @tablet-strict{
+				margin-left: 50px;
+			}
+
+			@media @desktop{
+				margin-left: 80px;
+			}
+
+			&-title{
+				font-size: 18px;
+			}
+
+			&-text{
+				font-size: 15px;
+				line-height: 30px;
+
+				@media @desktop{
+					font-size: 17px;
+				}
+			}
+
+			&-name{
+				line-height: 50px;
+				font-weight: 600;
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__title{
+		font-size: 19px;
+		font-weight: bold;
+	}
+}
+
+.demarcation-line{
+	margin-top: 70px;
+}
