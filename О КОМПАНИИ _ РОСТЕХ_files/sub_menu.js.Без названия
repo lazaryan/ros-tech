@@ -1,0 +1,22 @@
+
+ function onClickSubMenuButton(a)
+ {
+        console.log(a.id);
+    
+        if(a.id == 'subMenuButton'){
+            var lastButton = document.getElementById('subMenuButtonActive');
+            if(lastButton != null){
+                lastButton.id = 'subMenuButton';
+            }
+            a.id='subMenuButtonActive';
+        }
+        else if (a.id == 'head_menu')
+        {
+        	var lastButton = document.getElementById('head_active');
+            if(lastButton != null){
+                lastButton.id = 'head_menu';
+            }
+            a.id='head_active';	
+        }
+        
+ }

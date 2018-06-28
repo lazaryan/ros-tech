@@ -1,0 +1,67 @@
+#btn {
+  border: 1px solid #006fc4;
+  padding: 17px 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #006fc4;
+  margin-top: 65px;
+  display: inline;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+#btn:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid #b2b2b2;
+}
+/*ABOUT US*/
+.about__content {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  padding-top: 30px;
+}
+.aboutText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  margin-top: 50px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-about {
+    padding: 20px 25px;
+  }
+  .sub-menu {
+    padding: 0 25px 20px;
+    font-size: 0;
+  }
+  .sub-menu__title {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .sub-menu__item {
+    font-size: 12px;
+    margin-left: 0;
+    width: calc(25%);
+    text-align: center;
+  }
+  .sub-menu__item._active {
+    margin-left: 0;
+  }
+  .about__content {
+    width: 100%;
+    max-width: 960px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 767px) {
+  .aboutText {
+    margin-top: 15px!important;
+  }
+}

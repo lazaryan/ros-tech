@@ -1,0 +1,232 @@
+jQuery(document).ready(function()
+{
+	//start position of ul
+	var position = 960;
+	var offset = 960; 
+
+	//show next slide every 3 sec
+	var timeSlide = setInterval(right, 3000);
+	
+	//Be danger with this! If site URL changes the slider won't show images correct!
+	var path = 'http://test.imoochacho.net/web/images/';
+
+	//images list
+	var imgs = [
+					path + 'Proizvodstvo_001.jpg',
+					path + 'Proizvodstvo_002.jpg',
+					path + 'Proizvodstvo_003.jpg',
+					path + 'Proizvodstvo_004.jpg',
+					path + 'Proizvodstvo_005.jpg',
+					path + 'Proizvodstvo_006.jpg',
+					path + 'Proizvodstvo_007.jpg',
+					path + 'Proizvodstvo_008.jpg'
+				];
+	var imgNum = imgs.length;
+	var maxOffset = offset * imgNum;
+
+	//start position of ul
+	$("ul.hr").css('margin-left', - position + 'px');
+
+	//init images
+	$('#left_limiter').attr('src', imgs[imgNum - 1]);
+	$('#right_limiter').attr('src', imgs[0]);
+
+	for (var i = 0; i < imgNum; i++)
+	{
+		$('#img' + (i + 1)).attr('src', imgs[i]);
+	}
+
+	$("#arrow_right").click(function()
+	{
+		right();
+
+		//delay autoScroll
+		slideSwitcher();
+	});
+
+	$("#arrow_left").click(function()
+	{
+		left();	
+		
+		//delay autoScroll
+		slideSwitcher();
+	});	
+
+	//square buttons
+	$(".square").click(function()
+	{
+		var slidesNum = 8;
+		//get id
+		var id = $(this).attr('id');
+
+		switch (id)
+		{
+			case "pause":
+			{
+				//stop autoscroll
+				clearInterval(timeSlide);
+				$("#pause").css('background-color', 'rgba(175, 175, 175, 0.8)');
+				return;
+			}
+
+			case "play":
+			{
+				//start autoscroll
+				timeSlide = setInterval(right, 3000);
+				$("#pause").css('background-color', 'rgba(175, 175, 175, 0.0)');
+				return;
+			}
+
+			default:{}
+		}
+
+		id = id.substr(id.length - 1);
+
+		//change current offset and apply
+		position = id * offset;
+		$("ul.hr").css('margin-left', - position + 'px');
+
+		//clear other squares and colorize current
+		for (var i = 1; i <= slidesNum; i++)
+		{
+			if (i == id) continue;
+
+			$("#square" + i).css('background-color', 'rgba(175, 175, 175, 0.0)');
+		}
+		$("#square" + id).css('background-color', 'rgba(175, 175, 175, 0.8)');
+		
+		//delay autoscroll
+		slideSwitcher();
+	});
+
+	//pause button
+	/*$("#pause").click(function()
+	{
+		//stop autoscroll
+		clearInterval(timeSlide);
+		$("#pause").css('background-color', 'rgba(175, 175, 175, 0.8)');
+	});
+
+	//play button
+	$("#play").click(function()
+	{
+		
+		//start autoscroll
+		timeSlide = setInterval(right, 3000);
+		$("#pause").css('background-color', 'rgba(175, 175, 175, 0.0)');
+	});*/
+
+	function slideSwitcher()
+	{
+		clearInterval(timeSlide);
+		timeSlide = setInterval(right, 3000);
+	}
+
+	function right()
+	{
+		$("ul.hr").css('transition', 'ease-out 0.5s');
+		if (position >= maxOffset)
+		{
+			//move
+			position += offset;
+			$("ul.hr").css('margin-left', - position + 'px');
+
+			//delay 0.3s
+			setTimeout(shiftLeft, 500);
+			$("#square8").css('background-color', 'rgba(175, 175, 175, 0.0)');
+			$("#square1").css('background-color', 'rgba(175, 175, 175, 0.8)');
+
+		}
+		else
+		{
+			position += offset;
+			$("ul.hr").css('margin-left', - position + 'px');
+
+			//set color
+			$("#square" + ((position / offset) - 1)).css('background-color', 'rgba(175, 175, 175, 0.0)');
+			$("#square" + (position / offset)).css('background-color', 'rgba(175, 175, 175, 0.8)');
+		}
+	}
+
+	function left()
+	{
+		$("ul.hr").css('transition', 'ease-out 0.5s');
+
+		if (position <= offset)
+		{
+			//move
+			position -= offset;
+			$("ul.hr").css('margin-left', - position + 'px');
+
+			//delay 0.3s
+			setTimeout(shiftRight, 500);
+			$("#square1").css('background-color', 'rgba(175, 175, 175, 0.0)');
+			$("#square8").css('background-color', 'rgba(175, 175, 175, 0.8)');
+
+		}
+		else
+		{
+			position -= offset;
+			$("ul.hr").css('margin-left', - position + 'px');
+
+			//set color
+			$("#square" + ((position / offset) + 1)).css('background-color', 'rgba(175, 175, 175, 0.0)');
+			$("#square" + (position / offset)).css('background-color', 'rgba(175, 175, 175, 0.8)');
+		}
+	}
+
+	function shiftLeft()
+	{
+		$("ul.hr").css('transition', 'none');
+		position = offset;
+
+		$("ul.hr").css('margin-left', - position + 'px');
+	}
+
+	function shiftRight()
+	{
+
+		$("ul.hr").css('transition', 'none');
+			if ($.browser.safari)
+			{
+				position = maxOffset;
+			}
+			else
+			{
+				position = maxOffset;
+			}
+
+			$("ul.hr").css('margin-left', - position + 'px');
+	}
+
+	$(function() {
+  		$(".slider").swipe( {
+    	//Generic swipe handler for all directions
+    	swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      		
+      		//inversed for swiping
+      		switch (direction)
+      		{
+      			case "right":
+      			{
+      				left();
+      				break;
+      			}
+      			case "left":
+      			{
+      				right();
+      				break;
+      			}
+      			default: break;
+      		}
+
+      		//delay autoScroll
+			slideSwitcher();
+    	}
+  	});
+
+  	//Set some options later
+  	$(".slider").swipe( {fingers:1} );
+	});
+
+});

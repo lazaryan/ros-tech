@@ -1,0 +1,140 @@
+#footerLogo {
+  float: left;
+  margin: 30px 0 0 -127px;
+  display: inline-block;
+  cursor: pointer;
+}
+.copyright {
+  float: left;
+  margin: 150px 0 0 -127px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  position: relative;
+  line-height: 1.5;
+}
+.light {
+  color: #b2b2b2;
+}
+.footer {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 0 25px;
+}
+.footer__container {
+  display: inline-block;
+}
+.footer__nav {
+  margin-top: 55px;
+  float: right;
+}
+.footer__nav-item {
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  margin: 0 0 0 50px;
+}
+.footer__nav-link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.footer__button {
+  display: inline-block;
+  border: 1px solid #b2b2b2;
+  padding: 17px 37px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  background-color: white;
+  float: right;
+  margin: 80px 0 0 38px;
+  cursor: pointer;
+  transition: 0.3s all;
+  text-decoration: none;
+}
+.footer__button:hover {
+  border: 1px solid #f0f0f0;
+  padding: 17px 37px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  background-color: #f0f0f0;
+}
+/*
+ TABLET
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+  #footerLogo {
+    margin: 0;
+  }
+  .footer__nav {
+    margin-top: 15px;
+  }
+  .footer__nav-item {
+    margin: 0 0 0 25px;
+  }
+  .footer__nav-link {
+    font-size: 14px;
+  }
+  .copyright {
+    display: block;
+    margin: 60px 0;
+    clear: both;
+  }
+  .footer__button {
+    width: 225px;
+    margin: 60px 0 0 38px;
+  }
+}
+/*
+ MOBILE
+*/
+@media (max-width: 767px) {
+  .main-contact__text {
+    margin-top: 15px;
+  }
+  .footer__container {
+    display: block;
+  }
+  .footer__logo-wrap {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .footer__nav {
+    float: none;
+    display: block;
+    margin-top: 0;
+    text-align: center;
+  }
+  .footer__nav-item {
+    display: block;
+    line-height: 2;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+  }
+  .footer__button {
+    display: block;
+    float: none;
+    width: 280px;
+    margin: 10px auto;
+    text-align: center;
+  }
+  #footerLogo {
+    display: inline-block;
+    margin: 25px auto;
+    float: none;
+  }
+  .copyright {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+  }
+}

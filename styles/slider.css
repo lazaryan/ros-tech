@@ -1,0 +1,29 @@
+.about__slider {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  z-index: 10;
+}
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.arrow-left__image,
+.arrow-right__image {
+  width: auto;
+  height: 60px;
+}
+.arrow-left {
+  left: 25px;
+}
+.arrow-left__image {
+  transform: rotate(180deg);
+}
+.arrow-right {
+  right: 25px;
+}
