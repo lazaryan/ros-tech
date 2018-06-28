@@ -23,7 +23,7 @@
 
 		@media @large{
 			width: 80vw;
-			max-width: 1200px;
+			max-width: 1100px;
 			margin: 0 auto;
 		}
 	}
@@ -164,6 +164,7 @@
 		&_text{
 			font-size: 15px;
 			margin-bottom: 30px;
+			line-height: 35px;
 
 			@media @desktop{
 				font-size: 17px;
@@ -205,6 +206,76 @@
 	&__title{
 		font-size: 19px;
 		font-weight: bold;
+	}
+
+	&__table{
+		width: 100%;
+		margin-bottom: 100px;
+		border-spacing: 0;
+
+		&_item{
+			max-width: 12vw;
+			font-size: 8px;
+			overflow-wrap: break-word;
+			word-break: keep-all;
+			padding: 10px 0;
+			text-align: center;
+			border-right: 1px solid #C9C9C9;
+			border-top: 1px solid #C9C9C9;
+			font-weight: 500;
+			line-height: 10px;
+
+			&-line{
+				font-size: 8px;
+				text-align: center;
+				font-weight: 500;
+				line-height: 10px;
+			}
+
+			@media @tablet-strict{
+				font-size: 11px;
+				line-height: 12px;
+
+				&-line{
+					font-size: 11px;
+					line-height: 12px;
+				}
+			}
+
+			@media @desktop{
+				padding: 20px 0;
+			}
+
+			@media @desktop-strict{
+				font-size: 13px;
+				line-height: 17px;
+
+				&-line{
+					font-size: 13px;
+					line-height: 17px;
+				}
+			}
+
+			@media @large{
+				max-width: 170px;
+				font-size: 14px;
+				line-height: 21px;
+
+				&-line{
+					font-size: 14px;
+					line-height: 21px;
+				}
+			}
+
+			&-top{
+				border-top: none;
+				font-weight: bold;
+			}
+
+			&-right{
+				border-right: none;
+			}
+		}
 	}
 }
 
