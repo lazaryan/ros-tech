@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta   name="viewport"
+            	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    	<meta   http-equiv="X-UA-Compatible"
+            	content="ie=edge">
+
+	<title>КОНФИГУРАТОР | РОСТЕХ</title>
+	<link rel="stylesheet" href="styles/page/normalize.css">
+	<link rel="stylesheet" href="styles/page/configurator.css">
+</head>
+<body>
+	<div class="configurator">
+		<div class="configurator__content">
+			<h1 class="configurator__name">КОНФИГУРАТОР</h1>
+			<h4 class="configurator__title">Подберите Испытательную Установку</h4>
+			<form action="" method="POST">
+				<div class="configurator__test-device">
+					<div class="configurator__test-device_characteristics">
+						<div class="configurator__test-device_title">
+							<p class="configurator__test-device_title-i">Испытываемое устройство</p>
+						</div>
+						<div class="configurator__test-device_input-fields">
+							<div class="configurator__test-device_input">
+								<div for="mass_product" class="configurator__test-device_text configurator__test-device_text-required">Масса изделия (кг)</div>
+								<input type="number" required name="mass_product" min="0" step="0.01" class="configurator__test-device_input-i">
+							</div>
+							<div class="configurator__test-device_input">
+								<div for="mass_tooling" class="configurator__test-device_text configurator__test-device_text-required">Масса оснастки (кг)</div>
+								<input type="number" required name="mass_tooling" min="0" step="0.01" class="configurator__test-device_input-i">
+							</div>
+							<div class="configurator__test-device_input">
+								<div for="length" class="configurator__test-device_text configurator__test-device_text-required">Длина (мм)</div>
+								<input type="number" required name="length" min="0" step="0.01" class="configurator__test-device_input-i">
+							</div>
+							<div class="configurator__test-device_input">
+								<div for="width" class="configurator__test-device_text configurator__test-device_text-required">Ширина (мм)</div>
+								<input type="number" required name="width" min="0" step="0.01" class="configurator__test-device_input-i">
+							</div>
+							<div class="configurator__test-device_input">
+								<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Высота (мм)</div>
+								<input type="number" required name="height" min="0" step="0.01" class="configurator__test-device_input-i">
+							</div>
+						</div>
+					</div>
+
+					<div class="configurator__test-device_characteristics">
+						<div class="configurator__test-device_title">
+							<label class="configurator__test-device_title-i">Синус</label>
+							<input type="checkbox" name="sin" id="sinOn" class="configurator__test-device_title-checked">
+						</div>
+						<div class="configurator__test-device_input-fields">
+							<div class="configurator__test-cycle">
+								<div class="configurator__test-cycle_header">
+									<label for="" class="configurator__test-cycle_header-i">
+										<span class="configurator__test-cycle_header-text">Цикл испытаний 1</span>
+										<span class="configurator__test-cycle_header-arrow">
+											<span class="configurator__test-cycle_header-arrow_line"></span>
+										</span>
+									</label>
+									<input type="checkbox" name="cicle_sin_1" id="cicle_sin_1" checked disabled class="configurator__test-cycle_header-checked">
+								</div>
+								<div class="configurator__test-cycle_inputes">
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Частота начальная (Гц)</div>
+										<input type="number" required name="frequency_range1_1" id="frequency_range1_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text">Единицы измерения</div>
+										<select name="dim_sin1_1" id="dimSin1_1" disabled class="configurator__test-device_input-i">
+											<option value="3">g</option>
+                        								<option value="1">мм</option>
+                        								<option value="2">м/с</option>
+                        								<option value="4">м/с^2</option>
+										</select>
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Ускорение (g)</div>
+										<input type="number" required name="acceleration_sin_1" id="inputId1_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Частота конечная (Гц)</div>
+										<input type="number" required name="frequency_range2_1" id="frequency_range2_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text">Единицы измерения</div>
+										<select name="dim_sin1_1" id="dimSin1_1" disabled class="configurator__test-device_input-i">
+											<option value="3">g</option>
+                        								<option value="1">мм</option>
+                        								<option value="2">м/с</option>
+                        								<option value="4">м/с^2</option>
+										</select>
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Ускорение (g)</div>
+										<input type="number" required name="frequency_range2_1" id="frequency_range2_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="configurator__add-test-device">
+							<span class="configurator__add-test-device_text">Добавить цикл испытаний</span>
+							<span class="configurator__add-test-device_buttom" id="add_cicle_impact">
+								<span class="configurator__add-test-device_buttom-line"></span>
+							</span>
+						</div>
+					</div>
+
+					<div class="configurator__test-device_characteristics">
+						<div class="configurator__test-device_title">
+							<label class="configurator__test-device_title-i">ШСВ</label>
+							<input type="checkbox" name="bus" id="busOn" class="configurator__test-device_title-checked">
+						</div>
+						<div class="configurator__test-device_input-fields">
+							<div class="configurator__test-cycle">
+								<div class="configurator__test-cycle_header">
+									<label for="" class="configurator__test-cycle_header-i">
+										<span class="configurator__test-cycle_header-text">Цикл испытаний 1</span>
+										<span class="configurator__test-cycle_header-arrow">
+											<span class="configurator__test-cycle_header-arrow_line"></span>
+										</span>
+									</label>
+									<input type="checkbox" name="cicle_bus_1" id="cicle_bus_1" checked disabled class="configurator__test-cycle_header-checked">
+								</div>
+								<div class="configurator__test-cycle_inputes">
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text">Единицы измерения</div>
+										<select name="spu_type_1" id="spuType_1" disabled class="configurator__test-device_input-i">
+											<option value="1">Наклон</option>
+                        								<option value="2">Дисперсия</option>
+										</select>
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Частота начальная</div>
+										<input type="number" required name="frequency_bus_1_1" id="frequencyBus1_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Частота конечная</div>
+										<input type="number" required name="frequency_bus_2_1" id="frequencyBus2_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text">Коэффициент амплитуды</div>
+										<input type="number" required name="amplitude_factor_1" id="amplitudeFactor_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text">Единицы измерения спектральной плостности</div>
+										<select name="dim_bus1_1" id="dimBus1_1" disabled class="configurator__test-device_input-i">
+											<option value="1">g^2/Гц</option>
+                        								<option value="2">м^2/c^4/Гц</option>
+										</select>
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Спектральная плотность 1</div>
+										<input type="number" required name="spectral_density_1_1" id="spectralDensity1_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Спектральная плотность 2</div>
+										<input type="number" required name="spectral_density_2_1" id="spectralDensity2_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Наклон (Дб)</div>
+										<input type="number" required name="tilt_1" id="tilt_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="configurator__add-test-device">
+							<span class="configurator__add-test-device_text">Добавить цикл испытаний</span>
+							<span class="configurator__add-test-device_buttom" id="add_cicle_impact">
+								<span class="configurator__add-test-device_buttom-line"></span>
+							</span>
+						</div>
+					</div>
+
+					<div class="configurator__test-device_characteristics">
+						<div class="configurator__test-device_title">
+							<label class="configurator__test-device_title-i">Удар</label>
+							<input type="checkbox" name="impact" id="impactOn" class="configurator__test-device_title-checked">
+						</div>
+						<div class="configurator__test-device_input-fields">
+							<div class="configurator__test-cycle">
+								<div class="configurator__test-cycle_header">
+									<label for="" class="configurator__test-cycle_header-i">
+										<span class="configurator__test-cycle_header-text">Цикл испытаний 1</span>
+										<span class="configurator__test-cycle_header-arrow">
+											<span class="configurator__test-cycle_header-arrow_line"></span>
+										</span>
+									</label>
+									<input type="checkbox" name="cicle_impact_1" id="cicle_impact_1" checked disabled class="configurator__test-cycle_header-checked">
+								</div>
+								<div class="configurator__test-cycle_inputes">
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text">Единицы измерения ускорения</div>
+										<select name="dim_impact_1" id="dimImpact_1" disabled class="configurator__test-device_input-i">
+											<option value="1">g</option>
+                            								<option value="2">м/с^2</option>
+										</select>
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Ускорение</div>
+										<input type="number" required name="acceleration_impact_1" id="acceleration_impact_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text configurator__test-device_text-required">Длительность (мс)</div>
+										<input type="number" required name="duration_1" id="duration_1" min="0" step="0.01" disabled class="configurator__test-device_input-i">
+									</div>
+									<div class="configurator__test-device_input">
+										<div for="height" class="configurator__test-device_text">Форма удара</div>
+										<select name="form_strike_1" id="form_strike_1" disabled class="configurator__test-device_input-i">
+											<option value="1">Псин</option>
+                        								<option value="2">Пугол</option>
+                        								<option value="3">Тугол</option>
+                        								<option value="4">Гсин</option>
+                        								<option value="5">Син</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="configurator__add-test-device">
+							<span class="configurator__add-test-device_text">Добавить цикл испытаний</span>
+							<span class="configurator__add-test-device_buttom" id="add_cicle_impact">
+								<span class="configurator__add-test-device_buttom-line"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="configurator__options-i">
+				<div class="configurator__options">
+					<p class="configurator__options_header">Опции</p>
+					<div class="configurator__options_input-fields">
+						<div class="configurator__options_checkeds">
+							<div class="configurator__options_checked">
+								<span class="configurator__options_checked-name">Расширительный стол</span>
+								<input type="checkbox" name="r_table" id="r_table" class="configurator__options_checked-input">
+							</div>
+							<div class="configurator__options_checked">
+								<span class="configurator__options_checked-name">Горизонтальный стол</span>
+								<input type="checkbox" name="h_table" id="h_table" class="configurator__options_checked-input">
+							</div>
+							<div class="configurator__options_checked">
+								<span class="configurator__options_checked-name">Только горизонтальный стол</span>
+								<input type="checkbox" name="h_table_only" id="h_table_only" class="configurator__options_checked-input">
+							</div>
+							<div class="configurator__options_checked">
+								<span class="configurator__options_checked-name">Датчики</span>
+								<input type="checkbox" checked name="sensors" id="sensors" class="configurator__options_checked-input">
+							</div>
+							<div class="configurator__options_checked">
+								<span class="configurator__options_checked-name">Термокамера</span>
+								<input type="checkbox" name="heat_chamber" id="heat_chamber" class="configurator__options_checked-input">
+							</div>
+						</div>
+						<div class="configurator__options_inputs">
+							<div class="configurator__options_input">
+								<span class="configurator__options_input-name">Форма:</span>
+								<select name="r_table_form" id="r_table_form" class="configurator__options_input-i">
+									<option value="Круглый">Круглый</option>
+                            						<option value="Квадратный">Квадратный</option>
+								</select>
+							</div>
+							<div class="configurator__options_input">
+								<span class="configurator__options_input-name">Материал:</span>
+								<select name="r_table_material" id="r_table_material" class="configurator__options_input-i">
+									<option value="Алюминий">Алюминий</option>
+                            						<option value="Магний">Магний</option>
+								</select>
+							</div>
+							<div class="configurator__options_input">
+								<span class="configurator__options_input-name">Материал:</span>
+								<select name="h_table_material" id="h_table_material" class="configurator__options_input-i">
+									<option value="Алюминий">Алюминий</option>
+                            						<option value="Магний">Магний</option>
+								</select>
+							</div>
+							<div class="configurator__options_input">
+								<span class="configurator__options_input-name">Материал:</span>
+								<select name="h_table_only_material" id="h_table_only_material" class="configurator__options_input-i">
+									<option value="Алюминий">Алюминий</option>
+                            						<option value="Магний">Магний</option>
+								</select>
+							</div>
+							<div class="configurator__options_input">
+								<span class="configurator__options_input-name">Материал:</span>
+								<input type="number" required step="1" min="2" name="sensors_number" id="sensors_number" value="2" class="configurator__options_input-i">
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<p class="configurator__hint">Поля обязательны для заполнения</p>
+				<div class="configurator__button">
+					<input type="submit" class="configurator__button-i" value="ПОДОБРАТЬ">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
