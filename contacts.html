@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta   name="viewport"
+            	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    	<meta   http-equiv="X-UA-Compatible"
+            	content="ie=edge">
+
+	<title>КОНТАКТЫ | РОСТЕХ</title>
+    	<link rel="stylesheet" href="styles/page/normalize.css">
+    	<link rel="stylesheet" href="styles/page/contacts.css">
+</head>
+<body>
+	<div class="contacts">
+		<div class="contacts__content">
+			<h1 class="contacts__title">
+				КОНТАКТЫ
+			</h1>
+			<div class="contacts__information">
+				<div class="contacts__information_map">
+					<img src="images/Map.png" alt="" class="contacts__information_map-i">
+				</div>
+				<div class="contacts__information_text">
+					<h2 class="contacts__information_title">
+						КОНТАКТНАЯ ИНФОРМАЦИЯ
+					</h2>
+					<p class="contacts__information_text-i">Адрес:</p>
+					<p class="contacts__information_text-i contacts__information_text-address">347943, Ростовская область, г. Таганрог, пер. 7-й Новый, 95 Д.</p>
+					<p class="contacts__information_text-i">Тел/факс: <a href="tel: 88634382525" class="contacts__information_phone">8 (8634) 38-25-25</a> (многоканальный)</p>
+					<p class="contacts__information_text-i">E-mail: <a href="mailto:info@rosteh.ru?subject=" class="contacts__information_mail">info@rosteh.ru</a>, <a href="mailto:poctex@pbox.ttn.ru?subject=" class="contacts__information_mail">poctex@pbox.ttn.ru</a></p>
+					<p class="contacts__information_text-i">Филиал в Москве:</p>
+					<p class="contacts__information_text-address">105094, г. Москва, Семёновская наб., 2/1, стр. 1</p>
+				</div>
+			</div>
+			<form action="http://test.imoochacho.net/index.php/contacts_c" method="POST">
+				<div class="contacts__form">
+					<h2 class="contacts__form_title">ФОРМА ОБРАТНОЙ СВЯЗИ</h2>
+					<div class="contacts__form_input-fields">
+						<input class="contacts__form_input" id="theme" name="theme" type="text" placeholder="Тема" required maxlength="24" value="">
+                        			<input class="contacts__form_input" id="name" name="name" type="text" placeholder="Имя" required minlength="3" maxlength="12">
+                        			<input class="contacts__form_input" id="email" name="email" type="email" required placeholder="Почта">
+                        			<input class="contacts__form_input" id="tel" name="tel" type="tel" required placeholder="+7 (_ _ _) _ _ _-_ _-_ _">
+					</div>
+					<div class="contacts__form_text">
+						<textarea class="contacts__form_text-i" required name="message" type="text" placeholder="Текст сообщения" maxlength="512"></textarea>
+					</div>
+					<div class="contacts__form_submit">
+						<input id="btn" type="submit" value="ОТПРАВИТЬ" class="contacts__form_submit-i">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
