@@ -28,16 +28,30 @@
 	width: 100%;
 	display: block;
 	padding-top: 15px;
-	margin-bottom: 80px;
+	margin-bottom: 20px;
+
+	&__link{
+		text-decoration: none;
+		color: #000;
+		outline: none;
+
+		&_active{
+			color: #006fc4;
+			border-bottom: 1px solid #006fc4;
+		}
+	}
 
 	@media @desktop{
-		padding-top: 15px;
-		margin-bottom: 0;
-		clear: both;
+		margin-top: 15px;
 	}
 
 	&__logo{
 		width: 100%;
+
+		@media @desktop{
+			width: 25%;
+			display: inline-block;
+		}
 
 		&_image{
 			width: 70%;
@@ -49,15 +63,10 @@
 				width: 100%;
 			}
 
-			@media @desktop-strict{
-				width: 20%;
+			@media @desktop{
+				width: 100%;
 				max-width: none;
 			}
-		}
-
-		@media @large{
-			width: 25%;
-			max-width: none;
 		}
 
 		&_burger{
@@ -116,15 +125,15 @@
 		transition: .5s;
 		transform-origin: top;
 		transform: scaleY(0);
+		height: 0;
 		clear: both;
 		opacity: 0;
 
 		@media @desktop{
-			width: 75%;
-			float: right;
-			clear: none;
 			transform: scaleY(1);
 			opacity: 1;
+			width: 70%;
+			float: right;
 		}
 
 		&_item{
@@ -138,22 +147,17 @@
 				border: none;
 			}
 
-			@media @tablet-strict{
-				line-height: 40px;
-			}
-
 			@media @desktop{
-				width: 19%;
 				display: inline-block;
-				line-height: 30px;
-				font-size: 19px;
+				width: 19%;
 				border: none;
 			}
 		}
 
 		&_active{
-			transform: scaleY(1);
+			height: auto;
 			opacity: 1;
+			transform: scaleY(1);
 		}
 
 		&_search{
@@ -161,51 +165,47 @@
 
 			&-i{
 				display: inline-block;
-				width: 45%;
-				cursor: pointer;
 			}
 
 			&-en{
 				width: 50%;
 				border-right: 1px solid #000;
-				padding-right: 15px;
-				margin-top: 15px;
 				float: left;
-
-				@media @desktop{
-					margin-top: 20px;
-				}
+				height: 35px;
+				margin-top: 2px;
 
 				&-i{
-					text-align: center;
-					float: right;
-					line-height: 25px;
-					width: 50px;
 					border: 1px solid #000;
+					width: 45px;
+					height: 25px;
+					line-height: 25px;
+					margin-top: 3px;
+					float: right;
+					margin-right: 5px;
+
+					@media @desktop{
+						margin-top: 5px;
+						margin-right: 10px;
+					}
 				}
 			}
 
 			&-img{
-				width: 35px;
-				max-width: 45%;
-				float: left;
+				width: 45%;
+				height: 30px;
+				margin-top: 2px;
 
 				&-i{
-					width: 25px;
-					display: block;
-					width: 25px;
-					margin-top: 15px;
-					margin-left: 15px;
+					float: left;
+					margin-left: 5px;
+					margin-top: 3px;
 
 					@media @desktop{
-						margin-top: 20px;
+						margin-top: 5px;
+						margin-left: 10px;
 					}
 				}
 			}
 		}
 	}
-}
-
-.asd{
-	clear: both;
 }
