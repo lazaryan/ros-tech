@@ -6,13 +6,29 @@
             	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
    	<meta   http-equiv="X-UA-Compatible"
             	content="ie=edge">
-	<title>Header</title>
+	<title>Menu</title>
 	<link rel="stylesheet" href="styles/page/normalize.css">
 	<link rel="stylesheet" href="styles/page/header.css">
 </head>
 <body>
 	<div class="content">
 		<header class="header">
+			<div class="header__search-bar js-header__search-bar">
+				<div class="header__search-bar_close js-header__search-bar_close">
+					<div class="header__search-bar_close-i">
+						<span class="header__search-bar_close-line"></span>
+					</div>
+				</div>
+				<div class="header__search-bar_input">
+					<div class="header__search-bar_input-img">
+						<img src="images/Interface.png" alt="" class="header__search-bar_input-img-i">
+					</div>
+					<input type="text" class="header__search-bar_input-i" name="t1">
+				</div>
+				<div class="header__search-bar_button">
+					<input type="submit" name="b1" value="НАЙТИ" class="header__search-bar_button-i">
+				</div>
+			</div>
 			<div class="header__logo">
 				<a href="#" class="header__link">
 					<div class="header__logo_image">
@@ -35,7 +51,7 @@
 								EN
 							</div>
 						</div>
-						<div class="header__nav_search-i header__nav_search-img">
+						<div class="header__nav_search-i header__nav_search-img js-header__nav_search-img">
 							<img src="images/Interface.png" alt="" class="header__nav_search-img-i">
 						</div>
 					</div>

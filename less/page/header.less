@@ -29,6 +29,7 @@
 	display: block;
 	padding-top: 15px;
 	margin-bottom: 20px;
+	position: relative;
 
 	&__link{
 		text-decoration: none;
@@ -204,6 +205,126 @@
 						margin-top: 5px;
 						margin-left: 10px;
 					}
+				}
+			}
+		}
+	}
+
+	&__search-bar{
+		width: 100%;
+		height: 30px;
+		margin-bottom: 10px;
+		max-width: 600px;
+		transition: .5s;
+
+		@media @tablet-strict{
+			width: 50%;
+		}
+
+		@media @desktop{
+			position: absolute;
+			width: 400px;
+			right: 10px;
+			top: 70px;
+			transform: scaleY(0);
+			opacity: 0;
+			transform-origin: top;
+		} 
+
+		&_active{
+			@media @desktop{
+				right: 10px;
+				top: 100px;
+				transform: scaleY(1);
+				opacity: 1;
+			}
+		}
+
+		&_input{
+			width: 75%;
+			display: inline-block;
+
+			&-img{
+				float: left;
+				box-size: border-box;
+				border-left: 1px solid #000;
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #000;
+				width: 30px;
+				height: 30px;
+
+				&-i{
+					height: 80%;
+					width: 80%;
+					margin: 10%;
+				}
+			}
+
+			&-i{
+				height: 30px;
+				width: 70%;
+				float: left;
+				box-size: border-box;
+				display: block;
+				line-height: 30px;
+				border-left: none;
+				border-right: 1px solid #000;
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #000;
+				padding-left: 5px;
+			}
+		}
+
+		&_button{
+			display: inline-block;
+			width: 23%;
+			float: right;
+
+			&-i{
+				height: 30px;
+				width: 100%;
+				max-width: 150px;
+				float: right;
+				box-size: border-box;
+				border: 1px solid #006fc4;
+				background-color: #006fc4;
+				color: #fff;
+			}
+		}
+
+		&_close{
+			height: 20px;
+			width: 100%;
+			margin-bottom: 5px;
+			display: none;
+
+			@media @desktop{
+				display: block;
+			}
+
+			&-i{
+				width: 20px;
+				height: 20px;
+				float: right;
+				cursor: pointer;
+			}
+
+			&-line{
+				width: 20px;
+				height: 2px;
+				background-color: #000;
+				display: block;
+				margin: 0 auto;
+				margin-top: 50%;
+				transform: translateY(-1px) rotate(45deg);
+
+				&::after{
+					content: '';
+					display: block;
+					width: 20px;
+					height: 2px;
+					background-color: #000;
+					transform: rotate(90deg);
 				}
 			}
 		}
